@@ -24,6 +24,12 @@ with st.echo(code_location='below'):
     data = []
 
     points_per_turn = total_points / num_turns
+    
+    st.write("Here's our first attempt at using data to create a table:")
+    st.write(pd.DataFrame({
+    'first column': [1, 2, 3, 4],
+    'second column': [10, 20, 30, 40]
+    }))
 
     for curr_point_num in range(total_points):
         curr_turn, i = divmod(curr_point_num, points_per_turn)
